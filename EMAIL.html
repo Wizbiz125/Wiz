@@ -12,16 +12,33 @@
 			<li><a href="index.html">HOME PAGE</a></li>
 		</ul>
 	</div>
-	<div class="layer">
-			<div class="text_1">
-				<div class="rectangle"><h2>E</h2></div>
-				<p> Our email: WizBiz125@outlook.com</p>
-				<br>
-				<span></span>
-				<br>
-				<p><br> Thank-you for coming an we hope to see you again!!</p>
-				<br>
-			</div>
-		</div>
+	<div class="container">
+		<form onsubmit="sendEmail(); reset(); return false;">
+			<h3>GET IN TOUCH WITH US</h3>
+			<input type="text" id="name" placeholder="Your Name" required>
+			<input type="email" id="email" placeholder="Email ID" required>
+			<input type="text" id="phome" placeholder="Phone No." required>
+			<textarea id="message" rows="4" placeholder="How may we assist you?"></textarea>
+			<button type="send">Send Message</button>
+		</form>
+	</div>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		function sendEmail() {
+			Email.send({
+				Host : "smtp.gmail.com",
+				Username : "codewithevan@gmail.com",
+				Password : "Arrow125",
+				To : 'them@website.com',
+				From : "you@isp.com",
+				Subject : "This is the subject",
+				Body : "And this is the body"
+			}).then(
+			message => alert(message)
+			);
+		}
+	</script>
+
+	
 </body>
 </html>

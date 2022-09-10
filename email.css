@@ -10,50 +10,51 @@ html,body {
 	background: lightsalmon;
 }
 
-.text_1 {
-	color: black;
-	text-align: center;
-	transform: translate(-50%,-50%);
-	position: absolute;
-	top: 53%;
-	left: 50%;
-}
-
-.rectangle {
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	font-family: 'Quicksand', sans-serif;
+.container {
+	width: 100%;
+	height: 100vh;
 	background: transparent;
-	border: 1px solid whitesmoke;
-	transform: translate(-50%,-50%);
-	position: absolute;
-	margin-top: -60px;
-	left: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.rectangle h2 {
-	color: black;
-	font-size: 50px;
-	font-weight: lighter;
-	transform: translate(-50%,-50%);
-	position: absolute;
-	left: 50%;
-	top: 50%;
+form {
+	background: whitesmoke;
+	display: flex;
+	flex-direction: column;
+	padding: 2vw 4vw;
+	width: 90%;
+	max-width: 600px;
+	border-radius: 10px;
 }
 
-.layer span {
-	text-align: center;
-	width: 80px;
-	height: 2px;
-	position: absolute;
-	margin-left: -40px;
-	background: black;
+form h3 {
+	color: #555;
+	font-weight: 800;
+	margin-bottom: 20px;
 }
 
-.text_1 p {
-	font-size: 15px;
-	font-family: 'Quicksand', cursive;
+form input, form textarea {
+	border: 0;
+	margin: 10px 0;
+	padding: 20px;
+	outline: none;
+	background: whitesmoke;
+	font-size: 16px;
+}
+
+form button {
+	padding: 15px;
+	background: red;
+	color: whitesmoke;
+	font-size: 18px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	width: 150px;
+	margin: 20px auto 0;
+	border-radius: 30px;
 }
 
 .menu-bar {
